@@ -1,0 +1,10 @@
+C:\Users\msise\Desktop\netProjects\ShopSystem\obj\Debug\netcoreapp2.0\ShopSystem.csproj.CoreCompileInputs.cache
+C:\Users\msise\Desktop\netProjects\ShopSystem\obj\Debug\netcoreapp2.0\ShopSystem.AssemblyInfoInputs.cache
+C:\Users\msise\Desktop\netProjects\ShopSystem\obj\Debug\netcoreapp2.0\ShopSystem.AssemblyInfo.cs
+C:\Users\msise\Desktop\netProjects\ShopSystem\bin\Debug\netcoreapp2.0\ShopSystem.deps.json
+C:\Users\msise\Desktop\netProjects\ShopSystem\bin\Debug\netcoreapp2.0\ShopSystem.runtimeconfig.json
+C:\Users\msise\Desktop\netProjects\ShopSystem\bin\Debug\netcoreapp2.0\ShopSystem.runtimeconfig.dev.json
+C:\Users\msise\Desktop\netProjects\ShopSystem\bin\Debug\netcoreapp2.0\ShopSystem.dll
+C:\Users\msise\Desktop\netProjects\ShopSystem\bin\Debug\netcoreapp2.0\ShopSystem.pdb
+C:\Users\msise\Desktop\netProjects\ShopSystem\obj\Debug\netcoreapp2.0\ShopSystem.dll
+C:\Users\msise\Desktop\netProjects\ShopSystem\obj\Debug\netcoreapp2.0\ShopSystem.pdb
