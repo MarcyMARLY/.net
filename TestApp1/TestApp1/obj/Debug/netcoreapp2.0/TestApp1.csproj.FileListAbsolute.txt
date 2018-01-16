@@ -1,0 +1,11 @@
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\bin\Debug\netcoreapp2.0\TestApp1.deps.json
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\bin\Debug\netcoreapp2.0\TestApp1.runtimeconfig.json
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\bin\Debug\netcoreapp2.0\TestApp1.runtimeconfig.dev.json
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\bin\Debug\netcoreapp2.0\TestApp1.dll
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\bin\Debug\netcoreapp2.0\TestApp1.pdb
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\obj\Debug\netcoreapp2.0\TestApp1.csprojResolveAssemblyReference.cache
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\obj\Debug\netcoreapp2.0\TestApp1.csproj.CoreCompileInputs.cache
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\obj\Debug\netcoreapp2.0\TestApp1.AssemblyInfoInputs.cache
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\obj\Debug\netcoreapp2.0\TestApp1.AssemblyInfo.cs
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\obj\Debug\netcoreapp2.0\TestApp1.dll
+C:\Users\msise\Desktop\netProjects\TestApp1\TestApp1\obj\Debug\netcoreapp2.0\TestApp1.pdb
