@@ -669,12 +669,15 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\msise\\Desktop\\netProjects\\ShopSystem\\ShopSystem.csproj",
-      "projectName": "ShopSystem",
-      "projectPath": "C:\\Users\\msise\\Desktop\\netProjects\\ShopSystem\\ShopSystem.csproj",
+      "projectUniqueName": "C:\\Users\\msise\\Desktop\\netProjects\\Week1Lab\\Week1Lab\\Week1Lab.csproj",
+      "projectName": "Week1Lab",
+      "projectPath": "C:\\Users\\msise\\Desktop\\netProjects\\Week1Lab\\Week1Lab\\Week1Lab.csproj",
       "packagesPath": "C:\\Users\\msise\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\msise\\Desktop\\netProjects\\ShopSystem\\obj\\",
+      "outputPath": "C:\\Users\\msise\\Desktop\\netProjects\\Week1Lab\\Week1Lab\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

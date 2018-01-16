@@ -4,6 +4,6 @@ namespace ShopSystem
 {
 	public class System
 	{
-		public List<Client> Clients;	 
+		public List<Client> Clients = new List<Client>();	 
 	}
 }

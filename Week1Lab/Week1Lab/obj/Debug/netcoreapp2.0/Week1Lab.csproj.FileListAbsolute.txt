@@ -1,0 +1,11 @@
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\bin\Debug\netcoreapp2.0\Week1Lab.deps.json
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\bin\Debug\netcoreapp2.0\Week1Lab.runtimeconfig.json
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\bin\Debug\netcoreapp2.0\Week1Lab.runtimeconfig.dev.json
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\bin\Debug\netcoreapp2.0\Week1Lab.dll
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\bin\Debug\netcoreapp2.0\Week1Lab.pdb
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\obj\Debug\netcoreapp2.0\Week1Lab.csprojResolveAssemblyReference.cache
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\obj\Debug\netcoreapp2.0\Week1Lab.csproj.CoreCompileInputs.cache
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\obj\Debug\netcoreapp2.0\Week1Lab.AssemblyInfoInputs.cache
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\obj\Debug\netcoreapp2.0\Week1Lab.AssemblyInfo.cs
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\obj\Debug\netcoreapp2.0\Week1Lab.dll
+C:\Users\msise\Desktop\netProjects\Week1Lab\Week1Lab\obj\Debug\netcoreapp2.0\Week1Lab.pdb

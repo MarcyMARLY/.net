@@ -23,18 +23,19 @@ namespace ShopSystem
             order1.CoffeeList.Add(cof1);
             order1.TeaList.Add(tea1);
 
-            /*Client client1 = new Client();
+            Client client1 = new Client();
             client1.id = 1;
             client1.cash = 20;
             client1.orders.Add(order1);
 
 
             System system = new System();
-            system.Clients.Add(client1);*/
-
-          
-
-
+            system.Clients.Add(client1);
+        }
+        public int Proportion(Client client){
+        	public int CoffeOrderNumber = 0;
+        	public int TeaOrderNumber = 0;
+        	
         }
     }
 }

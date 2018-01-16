@@ -6,6 +6,6 @@ namespace ShopSystem
 	{
 		public int id;
 		public int cash;
-		public List<Order> orders;
+		public List<Order> orders = new List<Order>();
 	}
 }
