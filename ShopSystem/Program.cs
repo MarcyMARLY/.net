@@ -32,10 +32,6 @@ namespace ShopSystem
             System system = new System();
             system.Clients.Add(client1);
         }
-        public int Proportion(Client client){
-        	public int CoffeOrderNumber = 0;
-        	public int TeaOrderNumber = 0;
-        	
-        }
+
     }
 }

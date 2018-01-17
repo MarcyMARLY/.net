@@ -9,12 +9,14 @@ namespace Week1Lab.Model
         private static int OrderId = 1;
         private int OrdersId;
 
-        public List<Coffee> CoffeeList = new List<Coffee>();
-        public List<Tea> TeaList = new List<Tea>();
+        public List<Coffee> CoffeeList { get; set; }
+        public List<Tea> TeaList { get; set; }
 
         public Order()
         {
             OrdersId = OrderId++;
+            CoffeeList = new List<Coffee>(); 
+            TeaList = new List<Tea>();
         }
 
         public int GetOrdersId()
