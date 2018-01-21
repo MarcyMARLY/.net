@@ -328,6 +328,91 @@ namespace Week2Lab
         }
         public static void Step4()
         {
+            var marketStore = new MarketStore() { Path = marketPath };
+            var productStore = new ProductStore() { Path = productPath };
+            var productInfoStore = new ProductInfoStore() { Path = productInfoPath };
+
+            var marketList = marketStore.GetCollection();
+            var productList = productStore.GetCollection();
+            var productInfoList = productInfoStore.GetCollection();
+
+
+
+            foreach (var item in marketList)
+            {
+                item.products = productList.Where(x => x.MarketId == item.ID).ToList();
+            }
+            foreach (var item in productList)
+            {
+                item.productInfos = productInfoList.Where(x => x.ProductId == item.Id).OrderBy(x => x.Parameter).ToList();
+            }
+            var temp = from product in productList
+                       join market in marketList on product.MarketId equals market.ID
+                       select new
+                       {
+                           Id = product.Id,
+                           Name = product.Name,
+                           Price = product.Price,
+                           Amount = product.Amount,
+                           DeliveryPeriod = product.DeliveryPeriod,
+                           Rating = market.Rating,
+                           productInfos = product.productInfos
+                       };
+            double average = temp.Average(x=>x.Rating);
+
+            foreach (var market in marketList)
+            {
+                Console.WriteLine("================================");
+                if (market.Rating < average)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine(string.Format("{0}) {1}; Rating: {2}; Product Price Sum: {3}",
+                   market.ID,
+                   market.Name,
+                   market.Rating,
+                   market.products.Sum(x => x.Price)));
+
+
+
+                foreach (var prod in market.products)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Product ");
+
+                    var prodTemplate = "{0} | {1} | {2} | {3} | {4}";
+
+                    Console.WriteLine(string.Format(prodTemplate,
+                    "Id",
+                    "Name",
+                    "Price",
+                    "Amount",
+                    "Delivery Perion (days)"));
+
+                    Console.WriteLine(string.Format(prodTemplate,
+                        prod.Id,
+                        prod.Name,
+                        prod.Price,
+                        prod.Amount,
+                        prod.DeliveryPeriod));
+                    var prodInfoTemp = "{0} | {1} | {2}  ";
+                    Console.WriteLine();
+                    Console.WriteLine("Product Info");
+                    Console.WriteLine(string.Format(prodInfoTemp, "Id", "Parameter", "Definition"));
+
+                    foreach (var info in prod.productInfos)
+                    {
+                        Console.WriteLine(string.Format(prodInfoTemp,
+                            info.Id,
+                            info.Parameter,
+                            info.Definition
+                            ));
+                    }
+                }
+
+            }
+
 
         }
     }
