@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using Week2Lab.Models;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Week2Lab
 {
@@ -46,7 +48,14 @@ namespace Week2Lab
                     Console.WriteLine("Which step you want to see?");
                     k = Console.ReadLine();
                 }
-                if(k != "1" && k != "2" && k!= "3" && k!= "4")
+                if (k == "5")
+                {
+                    val = true;
+                    Step5();
+                    Console.WriteLine("Which step you want to see?");
+                    k = Console.ReadLine();
+                }
+                if (k != "1" && k != "2" && k != "3" && k != "4" && k != "5") 
                 {
                     val = false;
                 }
@@ -414,6 +423,116 @@ namespace Week2Lab
             }
 
 
+        }
+        public static void Step5()
+        {
+
+            var marketStore = new MarketStore() { Path = marketPath };
+            var productStore = new ProductStore() { Path = productPath };
+            var productInfoStore = new ProductInfoStore() { Path = productInfoPath };
+
+            var marketList = marketStore.GetCollection();
+            var productList = productStore.GetCollection();
+            var productInfoList = productInfoStore.GetCollection();
+
+
+
+            /*foreach (var item in marketList)
+            {
+                item.products = productList.Where(x => x.MarketId == item.ID).ToList();
+            }
+            foreach (var item in productList)
+            {
+                item.productInfos = productInfoList.Where(x => x.ProductId == item.Id).OrderBy(x => x.Parameter).ToList();
+            }*/
+
+            Console.WriteLine("====================================");
+            foreach( var market in marketList)
+            {
+                Console.WriteLine("Market {0}:{1}", market.ID, market.Name);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Please, choose the number of the market:");
+            string k = Console.ReadLine();
+
+            var chProductList = productList.Where(x => x.MarketId == int.Parse(k)).ToList(); 
+            
+            foreach(var item in chProductList)
+            {
+                Console.WriteLine("Product {0}, Name {1}, Price {2}, TotalAmount {3}", item.Id, item.Name, item.Price, item.Amount);
+            }
+            Console.WriteLine();
+            List<string> lines = new List<string>();
+            /*lines.Add("ffff");
+            File.WriteAllLines(@"AppData/test.csv", lines);*/
+            
+            bool chh = true;
+            double totalAmount = 0;
+            while (chh == true)
+            {
+                Console.WriteLine("For quiting enter 'q', for continuing enter 'c'");
+                string ams = Console.ReadLine();
+                if (ams == "q")
+                {
+                    File.WriteAllLines(@"AppData/test.csv", lines);
+                    Console.WriteLine("The check");
+                    Console.WriteLine("====================================");
+                    var data = File.ReadAllLines(@"AppData/test.csv");
+
+                    foreach(var item in data)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    Console.WriteLine("=========");
+                    Console.WriteLine("Total: {0}", totalAmount);
+                    Console.WriteLine();
+                    chh = false;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Please, choose the product");
+                    string prName = Console.ReadLine();
+                    bool exist = false;
+                    foreach(var item in chProductList)
+                    {
+                        if (item.Id == int.Parse(prName))
+                        {
+
+                            //lines.Add(prName + ";");
+                            //lines.Add(item.Name + ";");
+                            Console.WriteLine("Please, enter the amount of the product");
+                            string prNum = Console.ReadLine();
+
+                            if (int.Parse(prNum) > item.Amount)
+                            {
+                                Console.WriteLine("No such amount of the product. Please choose less than or equal {0}", item.Amount);
+                                prNum = Console.ReadLine();
+                                //lines.Add(prNum + ";");
+                                item.Amount -= int.Parse(prNum);
+                                double summ = int.Parse(prNum) * item.Price;
+                                totalAmount += summ;
+                                lines.Add(prName + ";" + item.Name + ";"+ prNum + ";"+ summ.ToString()+";");
+                                //lines.Add("\n");
+                            }
+                            else
+                            {
+                                //lines.Add(prNum + ";");
+                                double summ = int.Parse(prNum) * item.Price;
+                                item.Amount -= int.Parse(prNum);
+                                totalAmount += summ;
+                                lines.Add(prName + ";" + item.Name + ";" + prNum + ";" + summ.ToString() + ";");
+                                lines.Add("\n");
+                            }
+                            exist = true;
+                        }
+                    }
+                    if(exist == false)
+                    {
+                        Console.WriteLine("No such product for this market");
+                    }                    
+                }
+            }
         }
     }
     
