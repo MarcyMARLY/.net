@@ -367,21 +367,40 @@ namespace Week2Lab
                            Rating = market.Rating,
                            productInfos = product.productInfos
                        };
-            double average = temp.Average(x=>x.Rating);
+            var temp1 = productList.Join(productInfoList, product => product.Id,
+                 info => info.ProductId,
+                
+                 (product, info)=>
+                 new { Pr = product, In = info, Name = product.Name,Price = product.Price,
+                     Parameter = info.Parameter, Definition = info.Definition, MarketId = product.MarketId})
+                 .Where(PandI=> (PandI.Pr.Id == PandI.In.ProductId && PandI.Parameter == "Rating"));
 
-            foreach (var market in marketList)
+
+            
+            var xx = marketList.Select(m => new
+            {
+                Name = m.Name,
+                ID = m.ID,
+                Rating = m.Rating,
+                products = m.products,
+                Average = temp1.Where(t => t.MarketId == m.ID).Average(z => int.Parse(z.Definition))
+            });
+           
+            double average = temp1.Average(x=>int.Parse(x.Definition));
+
+            foreach (var market in xx)
             {
                 Console.WriteLine("================================");
-                if (market.Rating < average)
+                if (market.Average < average)
                 {
                     Console.Write("*");
                 }
 
-                Console.WriteLine(string.Format("{0}) {1}; Rating: {2}; Product Price Sum: {3}",
+                Console.WriteLine(string.Format("{0}) {1}; Rating: {2};",
                    market.ID,
                    market.Name,
-                   market.Rating,
-                   market.products.Sum(x => x.Price)));
+                   market.Rating
+                   ));
 
 
 

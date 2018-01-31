@@ -1,0 +1,9 @@
+C:\Users\msise\Desktop\netProjects\Week3\TestLibrary1\TestLibrary1\bin\Debug\netcoreapp2.0\TestLibrary1.deps.json
+C:\Users\msise\Desktop\netProjects\Week3\TestLibrary1\TestLibrary1\bin\Debug\netcoreapp2.0\TestLibrary1.dll
+C:\Users\msise\Desktop\netProjects\Week3\TestLibrary1\TestLibrary1\bin\Debug\netcoreapp2.0\TestLibrary1.pdb
+C:\Users\msise\Desktop\netProjects\Week3\TestLibrary1\TestLibrary1\obj\Debug\netcoreapp2.0\TestLibrary1.csprojResolveAssemblyReference.cache
+C:\Users\msise\Desktop\netProjects\Week3\TestLibrary1\TestLibrary1\obj\Debug\netcoreapp2.0\TestLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\msise\Desktop\netProjects\Week3\TestLibrary1\TestLibrary1\obj\Debug\netcoreapp2.0\TestLibrary1.AssemblyInfoInputs.cache
+C:\Users\msise\Desktop\netProjects\Week3\TestLibrary1\TestLibrary1\obj\Debug\netcoreapp2.0\TestLibrary1.AssemblyInfo.cs
+C:\Users\msise\Desktop\netProjects\Week3\TestLibrary1\TestLibrary1\obj\Debug\netcoreapp2.0\TestLibrary1.dll
+C:\Users\msise\Desktop\netProjects\Week3\TestLibrary1\TestLibrary1\obj\Debug\netcoreapp2.0\TestLibrary1.pdb
