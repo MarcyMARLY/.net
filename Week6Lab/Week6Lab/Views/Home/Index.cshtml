@@ -1,0 +1,14 @@
+﻿@model Week6Lab.Models.Calc
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("Index", "Home", new { }, FormMethod.Post))
+{
+	@Html.LabelFor(m => m.Number1)<br /> @Html.TextBoxFor(x => x.Number1)<br />
+	@Html.LabelFor(m => m.Number2)<br /> @Html.TextBoxFor(x => x.Number2)<br />
+	<br />
+	<br />@Html.DropDownListFor(m => m.operationType, new SelectList(Enum.GetValues(typeof(Operation)))) <br />
+	@Html.LabelFor(m => m.Result)<br /> @Html.TextBoxFor(x => x.Result)<br />
+	<input type="submit" value="=" />
+}
