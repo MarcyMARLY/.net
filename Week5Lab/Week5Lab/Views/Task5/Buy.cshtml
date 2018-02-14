@@ -1,0 +1,15 @@
+﻿@model Week5Lab.Models.Product
+@{
+	ViewData["Title"] = "Buy";
+}
+
+<h2>Buy</h2>
+
+
+
+
+@using (Html.BeginForm("Answer", "Task5", new { ProductID = @ViewData["ProductID"], ID = @ViewData["ID"] }, FormMethod.Post))
+{
+	@Html.TextBox("Amount");
+	<input type="submit" value="OK">
+}

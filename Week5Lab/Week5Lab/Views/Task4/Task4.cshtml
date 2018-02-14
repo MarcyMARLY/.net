@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Week5Lab.Models.SpecialMarket>
+@{
+	ViewData["Title"] = "Task4";
+}
+
+<h2>Task4</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>MarketID</th>
+			<th>MarketName</th>
+			<th>MarketRating</th>
+			<th>AverageProductRating</th>
+
+
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+
+		<tr>
+			<td>
+				@item.ID
+			</td>
+			<td>
+				@item.Name
+			</td>
+			<td>
+				@item.Rating
+			</td>
+			<td>
+				@item.Average
+			</td>
+
+
+
+		</tr>
+		}
+	</tbody>
+</table>
+

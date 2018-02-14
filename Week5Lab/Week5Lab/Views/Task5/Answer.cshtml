@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewData["Title"] = "Answer";
+}
+
+<h2>Answer</h2>
+
+<h3>@ViewData["Answer"]</h3>
+<input type="button" value="Return to products" onclick="location.href='@Url.Action("Test", "Task5",new {ID = @ViewData["ID"]})'" />

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Week5Lab.Models.Market>
+@{
+	ViewData["Title"] = "Task2";
+}
+
+<h2>Task2</h2>
+<table class="table" >
+	<tr>
+		@foreach (var item in Model)
+	{
+		
+		<td>
+			<input type="button" value=@item.Name onclick="location.href='@Url.Action("Test", "Task2",new {ID = @item.ID})'" />
+		</td>
+}
+	</tr>
+</table>
+

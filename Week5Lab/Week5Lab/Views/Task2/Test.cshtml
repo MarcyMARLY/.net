@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Week5Lab.Models.ProductAndProductInfo>
+@{
+	ViewData["Title"] = "Test";
+}
+
+<h2>Test</h2>
+<table class="table">
+	<thead>
+		<tr>
+			
+			<th>ProductId</th>
+			<th>ProductName</th>
+			<th>ProductPrice</th>
+			<th>ProductAmount</th>
+			<th>DeliveryPeriod</th>
+			<th>ProductMarketId</th>
+			<th>InfoId</th>
+			<th>Parameter</th>
+			<th>Definition</th>
+			<th>ProductId</th>
+
+
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+
+			<tr>
+			
+				<td>
+					@item.ProductId
+				</td>
+				<td>
+					@item.ProductName
+				</td>
+				<td>
+					@item.ProductPrice
+				</td>
+				<td>
+					@item.ProductAmount
+				</td>
+				<td>
+					@item.ProductDeliveryPeriod
+				</td>
+				<td>
+					@item.ProductMarketId
+				</td>
+				<td>
+					@item.ProductInfoId
+				</td>
+				<td>
+					@item.ProductInfoParameter
+				</td>
+				<td>
+					@item.ProductInfoDefinition
+				</td>
+				<td>
+					@item.ProductInfoProductId
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+<input type="button" value="Sort by price" onclick="location.href='@Url.Action("SortedByPrice", "Task2",new {ID = @ViewData["ID"]})'" />
+<input type="button" value="Sort by amount" onclick="location.href='@Url.Action("SortedByAmount", "Task2",new {ID = @ViewData["ID"]})'" />
+

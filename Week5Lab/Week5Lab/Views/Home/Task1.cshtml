@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Week5Lab.Models.Complete>
+@{
+	ViewData["Title"] = "Task1";
+}
+
+<h2>Task1</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>MarketID</th>
+			<th>MarketName</th>
+			<th>MarketRating</th>
+			<th>ProductId</th>
+			<th>ProductName</th>
+			<th>ProductPrice</th>
+			<th>ProductAmount</th>
+			<th>DeliveryPeriod</th>
+			<th>ProductMarketId</th>
+			<th>InfoId</th>
+			<th>Parameter</th>
+			<th>Definition</th>
+			<th>ProductId</th>
+
+
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			
+		<tr>
+			<td>
+				@item.MarketID
+			</td>
+			<td>
+				@item.MarketName
+			</td>
+			<td>
+				@item.MarketRating
+			</td>
+			<td>
+				@item.ProductId
+			</td>
+			<td>
+				@item.ProductName
+			</td>
+			<td>
+				@item.ProductPrice
+			</td>
+			<td>
+				@item.ProductAmount
+			</td>
+			<td>
+				@item.ProductDeliveryPeriod
+			</td>
+			<td>
+				@item.ProductMarketId
+			</td>
+			<td>
+				@item.ProductInfoId
+			</td>
+			<td>
+				@item.ProductInfoParameter
+			</td>
+			<td>
+				@item.ProductInfoDefinition
+			</td>
+			<td>
+				@item.ProductInfoProductId
+			</td>
+
+
+
+		</tr>
+		}
+	</tbody>
+</table>
