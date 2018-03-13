@@ -29,7 +29,16 @@ namespace Week6Lab.Controllers
                     calc.Result = calc.Number1 * calc.Number2;
                     break;
                 case Operation.Division:
-                    calc.Result = calc.Number1 / calc.Number2;
+                    try
+                    {
+                        calc.Result = calc.Number1 / calc.Number2;
+                    }
+                    catch (DivideByZeroException e)
+                    {
+                        Console.WriteLine(e);
+                        calc.Result = 0;
+                    }
+                    
                     break;
 
 
