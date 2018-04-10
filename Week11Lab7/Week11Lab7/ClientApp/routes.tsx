@@ -6,6 +6,7 @@ import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { UserPage } from './components/UserPage';
 import { FetchUsers } from './components/FetchUsers';
+import { Edit } from './components/Edit';
 
 export const routes = <Layout>
     <Route exact path='/' component={ Home } />
@@ -13,4 +14,5 @@ export const routes = <Layout>
 	<Route path='/fetchdata' component={FetchData} />
 	<Route path='/addUser' component={UserPage} />
 	<Route path='/userList' component={FetchUsers} />
+	<Route path='/edit' component={Edit}/>
 </Layout>;

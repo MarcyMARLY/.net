@@ -59,6 +59,7 @@ namespace Week11Lab7.Controllers
                 mark = user.mark,
                 category = user.category
             },newUser);
+           
         }
         [HttpPut("{id}")]
         public User Update(int id, [FromBody] User user)
@@ -81,6 +82,7 @@ namespace Week11Lab7.Controllers
             var user = context.Users.Where(x => x.id == id).FirstOrDefault();
             this.context.Users.Remove(user);
             this.context.SaveChanges();
+            //RedirectToAction("GetUsers","User");
             return NoContent();
         }
 
